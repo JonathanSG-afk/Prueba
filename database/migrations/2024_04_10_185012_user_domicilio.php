@@ -14,10 +14,12 @@ return new class extends Migration
         Schema::create('users_domicilio', function (Blueprint $table) {
             $table->id();
             $table->integer('idUser');
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
+            $table->string('domicilio');
+            $table->integer('numero_exterior')->nullable();
+            $table->integer('numero_interior')->nullable();
+            $table->integer('colonia')->nullable();
+            $table->integer('cp')->nullable();
+            $table->string('ciudad');
             $table->rememberToken();
             $table->timestamps();
         });
